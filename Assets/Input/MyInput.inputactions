@@ -1,0 +1,54 @@
+{
+    "name": "MyInput",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "b7f60523-a12c-46e1-b922-c5d04c5d57c8",
+            "actions": [
+                {
+                    "name": "Throw",
+                    "type": "Button",
+                    "id": "8b93bd88-b6d7-4a00-ba41-14010f4f0d19",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Reset",
+                    "type": "Button",
+                    "id": "46913620-0049-4812-8bcb-7edccada7e50",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "67685183-08d9-44e0-9887-95bc21dabbab",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Throw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5a807cb1-0dad-4ae0-8ba1-d4d54d1bda4f",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Reset",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
