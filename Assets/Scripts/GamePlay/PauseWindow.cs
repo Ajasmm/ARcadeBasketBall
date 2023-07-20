@@ -20,6 +20,6 @@ public class PauseWindow : MonoBehaviour
     public void Menu()
     {
         GameManager.Instance.SetGameplayMode(null);
-        SceneManager.LoadSceneAsync("MainMenu");
+        SceneManager.LoadSceneAsync(0);
     }
 }

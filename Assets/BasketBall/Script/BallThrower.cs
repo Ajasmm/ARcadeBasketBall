@@ -37,9 +37,14 @@ public class BallThrower : MonoBehaviour
     {
         if(gameplayMode == null)
         {
-            gameplayMode = (Basketball_GameplayMode) GameManager.Instance.GameplayMode;
-            if (gameplayMode == null)
+            try
+            {
+                gameplayMode = (Basketball_GameplayMode)GameManager.Instance.GameplayMode;
+            }
+            catch (Exception e)
+            {
                 return;
+            }
         }
         if (!gameplayMode.isPlaying)
             return;

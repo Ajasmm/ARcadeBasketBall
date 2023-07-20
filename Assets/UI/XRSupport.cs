@@ -23,7 +23,7 @@ public class XRSupport : MonoBehaviour
             yield return null;
         }
 
-        if(ARSession.state == ARSessionState.None || ARSession.state == ARSessionState.None)
+        if(ARSession.state == ARSessionState.None || ARSession.state == ARSessionState.Ready)
         {
             yield return ARSession.CheckAvailability();
         }
