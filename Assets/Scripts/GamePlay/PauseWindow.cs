@@ -15,7 +15,7 @@ public class PauseWindow : MonoBehaviour
     public void Restart()
     {
         GameManager.Instance.SetGameplayMode(null);
-        SceneManager.LoadSceneAsync(gameObject.scene.buildIndex);
+        SceneManager.LoadScene(1);
     }
     public void Menu()
     {

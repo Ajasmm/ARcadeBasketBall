@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
 
 public class PostPlacer : MonoBehaviour, IPointerDownHandler
 {
@@ -33,7 +34,7 @@ public class PostPlacer : MonoBehaviour, IPointerDownHandler
 
             foreach(ARRaycastHit hit in m_RaycastHitList)
             {
-                if(hit.hitType == UnityEngine.XR.ARSubsystems.TrackableType.Planes)
+                if((hit.hitType & TrackableType.Planes) != 0)
                 {
                     hittedRay = hit;
                     isHitConfirm = true;
@@ -42,12 +43,10 @@ public class PostPlacer : MonoBehaviour, IPointerDownHandler
             }
             if (!isHitConfirm)
             {
-
                 targetPoint.gameObject.SetActive(false);
                 return;
             }
 
-            Debug.Log($"hit type {hittedRay.hitType}");
             if (!targetPoint.gameObject.activeSelf)
                 targetPoint.gameObject.SetActive(true);
             targetPoint.position = hittedRay.pose.position;

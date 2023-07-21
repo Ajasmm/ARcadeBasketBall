@@ -19,10 +19,10 @@ public class GameEndWindow : MonoBehaviour
     public void Menu()
     {
         GameManager.Instance.SetGameplayMode(null);
-        SceneManager.LoadSceneAsync("MainMenu");
+        SceneManager.LoadSceneAsync(0);
     }
     public void Restart()
     {
-        SceneManager.LoadScene(gameObject.scene.buildIndex, LoadSceneMode.Single);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 }
